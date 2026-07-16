@@ -2,50 +2,161 @@
 <html lang="en">
 
 <head>
+
+    <!-- =========================
+         META INFORMATION
+    ========================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rahul G | Portfolio</title>
+    <!-- =========================
+         WEBSITE TITLE
+    ========================== -->
+    <title>Rahul G | AI & ML Portfolio</title>
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- =========================
+         WEBSITE ICON
+         (Add favicon later)
+    ========================== -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- =========================
+         GOOGLE FONT
+    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Font Awesome -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- =========================
+         FONT AWESOME
+    ========================== -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- =========================
+         BASE CSS
+    ========================== -->
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/base/style.css">
+
+    <!-- =========================
+         LAYOUT CSS
+    ========================== -->
+    <link rel="stylesheet" href="css/layout/navbar.css">
+    <link rel="stylesheet" href="css/layout/footer.css">
+
+    <!-- =========================
+         SECTION CSS
+    ========================== -->
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/statistics.css">
+    <link rel="stylesheet" href="css/sections/education.css">
+    <link rel="stylesheet" href="css/sections/skills.css">
+    <link rel="stylesheet" href="css/sections/projects.css">
+    <link rel="stylesheet" href="css/sections/innovation.css">
+    <link rel="stylesheet" href="css/sections/achievements.css">
+    <link rel="stylesheet" href="css/sections/certifications.css">
+    <link rel="stylesheet" href="css/sections/contact.css">
+
+    <!-- =========================
+         ANIMATION CSS
+    ========================== -->
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- =========================
+         RESPONSIVE CSS
+         (Always Last)
+    ========================== -->
+    <link rel="stylesheet" href="css/layout/responsive.css">
+
 </head>
 
 <body>
 
+    <!-- =========================
+         NAVBAR
+    ========================== -->
     <div id="navbar"></div>
 
-    <div id="hero"></div>
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
 
-    <div id="about"></div>
+        <div id="hero"></div>
 
-    <div id="statistics"></div>
+        <div id="about"></div>
 
-    <div id="education"></div>
+        <div id="statistics"></div>
 
-    <div id="skills"></div>
+        <div id="education"></div>
 
-    <div id="projects"></div>
+        <div id="skills"></div>
 
-    <div id="innovation"></div>
+        <div id="projects"></div>
 
-    <div id="achievements"></div>
+        <div id="innovation"></div>
 
-    <div id="certifications"></div>
+        <div id="achievements"></div>
 
-    <div id="contact"></div>
+        <div id="certifications"></div>
 
+        <div id="contact"></div>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <div id="footer"></div>
 
+    <!-- =========================
+         LIBRARIES
+    ========================== -->
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- =========================
+         DATA FILES
+    ========================== -->
+    <script src="js/data/portfolioConfig.js"></script>
+    <script src="js/data/projectData.js"></script>
+    <script src="js/data/certificateData.js"></script>
+    <script src="js/data/achievementData.js"></script>
+
+    <!-- =========================
+         CORE FILES
+    ========================== -->
     <script src="js/componentLoader.js"></script>
+    <script src="js/utils.js"></script>
+
+    <!-- =========================
+         FEATURE FILES
+    ========================== -->
+    <script src="js/navbar.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/certificates.js"></script>
+    <script src="js/achievements.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/animation.js"></script>
+
+    <!-- =========================
+         APPLICATION ENTRY
+         (Always Last)
+    ========================== -->
     <script src="js/app.js"></script>
 
 </body>

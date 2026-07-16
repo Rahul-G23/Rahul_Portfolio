@@ -1,0 +1,46 @@
+/* ===========================
+   ROOT VARIABLES
+=========================== */
+
+:root{
+
+    /* Colors */
+    --primary:#3B82F6;
+    --secondary:#06B6D4;
+
+    --background:#0F172A;
+    --surface:#1E293B;
+    --surface-light:#334155;
+
+    --white:#FFFFFF;
+    --text:#E2E8F0;
+    --text-light:#94A3B8;
+
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+
+    /* Typography */
+    --font-family:'Poppins',sans-serif;
+
+    --fs-xl:4rem;
+    --fs-lg:2.5rem;
+    --fs-md:1.2rem;
+    --fs-sm:1rem;
+
+    /* Spacing */
+    --section-padding:100px;
+    --container-width:1200px;
+
+    /* Border Radius */
+    --radius-sm:8px;
+    --radius-md:15px;
+    --radius-lg:25px;
+
+    /* Shadows */
+    --shadow:0 10px 30px rgba(0,0,0,.25);
+
+    /* Animation */
+    --transition:.3s ease;
+
+}
