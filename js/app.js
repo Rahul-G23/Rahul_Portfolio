@@ -4,4 +4,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     initializeNavbar();
 
+    initializeHero();
+    
 });

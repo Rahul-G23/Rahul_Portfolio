@@ -51,20 +51,3 @@ function initializeNavbar() {
     console.log("Navbar Initialized");
 
 }
-/* ===========================
-   NAVBAR STATES
-=========================== */
-
-.navbar--scrolled{
-
-    background:rgba(15,23,42,.95);
-
-    box-shadow:var(--shadow);
-
-}
-
-.navbar__menu--active{
-
-    display:flex;
-
-}
