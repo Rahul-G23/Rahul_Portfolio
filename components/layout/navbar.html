@@ -1,40 +1,81 @@
-<header class="header">
+<header class="navbar">
 
-    <nav class="navbar">
+    <div class="container navbar__container">
 
-        <a href="#hero" class="logo">
-            Rahul G
+        <!-- Logo -->
+        <a href="#hero" class="navbar__logo">
+            Rahul <span>G</span>
         </a>
 
-        <ul class="nav-menu">
+        <!-- Navigation Links -->
+        <ul class="navbar__menu" id="navbarMenu">
 
-            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li class="navbar__item">
+                <a href="#hero" class="navbar__link navbar__link--active">
+                    Home
+                </a>
+            </li>
 
-            <li><a href="#about" class="nav-link">About</a></li>
+            <li class="navbar__item">
+                <a href="#about" class="navbar__link">
+                    About
+                </a>
+            </li>
 
-            <li><a href="#education" class="nav-link">Education</a></li>
+            <li class="navbar__item">
+                <a href="#education" class="navbar__link">
+                    Education
+                </a>
+            </li>
 
-            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="navbar__item">
+                <a href="#skills" class="navbar__link">
+                    Skills
+                </a>
+            </li>
 
-            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li class="navbar__item">
+                <a href="#projects" class="navbar__link">
+                    Projects
+                </a>
+            </li>
 
-            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li class="navbar__item">
+                <a href="#achievements" class="navbar__link">
+                    Achievements
+                </a>
+            </li>
 
-            <li><a href="#certifications" class="nav-link">Certificates</a></li>
+            <li class="navbar__item">
+                <a href="#certifications" class="navbar__link">
+                    Certificates
+                </a>
+            </li>
 
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="navbar__item">
+                <a href="#contact" class="navbar__link">
+                    Contact
+                </a>
+            </li>
 
         </ul>
 
-        <div class="nav-actions">
+        <!-- Right Side Buttons -->
+        <div class="navbar__actions">
 
-            <button id="themeToggle" class="theme-btn">
+            <button
+                class="navbar__theme-btn"
+                id="themeToggle"
+                aria-label="Toggle Theme">
 
                 <i class="fa-solid fa-moon"></i>
 
             </button>
 
-            <button id="menuToggle" class="menu-btn">
+            <button
+                class="navbar__menu-btn"
+                id="menuToggle"
+                aria-label="Open Menu">
 
                 <i class="fa-solid fa-bars"></i>
 
@@ -42,6 +83,6 @@
 
         </div>
 
-    </nav>
+    </div>
 
 </header>

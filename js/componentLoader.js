@@ -1,28 +1,45 @@
-async function loadComponent(id, file) {
-    const response = await fetch(file);
+async function loadComponent(id, path) {
+
+    const response = await fetch(path);
 
     if (!response.ok) {
-        throw new Error(`Unable to load ${file}`);
+
+        console.error(`Unable to load ${path}`);
+
+        return;
     }
 
-    const html = await response.text();
-
-    document.getElementById(id).innerHTML = html;
+    document.getElementById(id).innerHTML =
+        await response.text();
 }
 
 async function loadAllComponents() {
 
-    await loadComponent("navbar", "components/navbar.html");
-    await loadComponent("hero", "components/hero.html");
-    await loadComponent("about", "components/about.html");
-    await loadComponent("statistics", "components/statistics.html");
-    await loadComponent("education", "components/education.html");
-    await loadComponent("skills", "components/skills.html");
-    await loadComponent("projects", "components/projects.html");
-    await loadComponent("innovation", "components/innovation.html");
-    await loadComponent("achievements", "components/achievements.html");
-    await loadComponent("certifications", "components/certifications.html");
-    await loadComponent("contact", "components/contact.html");
-    await loadComponent("footer", "components/footer.html");
+    await Promise.all([
 
+        loadComponent("navbar", "components/layout/navbar.html"),
+
+        loadComponent("hero", "components/sections/hero.html"),
+
+        loadComponent("about", "components/sections/about.html"),
+
+        loadComponent("statistics", "components/sections/statistics.html"),
+
+        loadComponent("education", "components/sections/education.html"),
+
+        loadComponent("skills", "components/sections/skills.html"),
+
+        loadComponent("projects", "components/sections/projects.html"),
+
+        loadComponent("innovation", "components/sections/innovation.html"),
+
+        loadComponent("achievements", "components/sections/achievements.html"),
+
+        loadComponent("certifications", "components/sections/certifications.html"),
+
+        loadComponent("contact", "components/sections/contact.html"),
+
+        loadComponent("footer", "components/layout/footer.html")
+
+    ]);
 }

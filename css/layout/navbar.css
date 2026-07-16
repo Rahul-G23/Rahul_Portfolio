@@ -1,0 +1,199 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:var(--z-navbar);
+
+    background:rgba(15,23,42,.75);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    transition:var(--transition);
+
+}
+
+.navbar__container{
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* Logo */
+
+.navbar__logo{
+
+    font-size:1.8rem;
+
+    font-weight:var(--fw-bold);
+
+    color:var(--white);
+
+    transition:var(--transition);
+
+}
+
+.navbar__logo:hover{
+    transform:scale(1.05);
+}
+
+.navbar__logo span{
+
+    color:var(--primary);
+
+}
+
+/* Menu */
+
+.navbar__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.5rem;
+
+}
+
+/* Links */
+
+.navbar__link{
+
+    color:var(--text);
+
+    font-weight:var(--fw-medium);
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.navbar__link:hover{
+
+    color:var(--primary);
+
+}
+
+.navbar__link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    transition:.3s ease;
+
+}
+
+.navbar__link:hover::after,
+.navbar__link:hover::after{
+
+    width:100%;
+
+}
+
+.navbar__link--active{
+
+    color:var(--primary);
+
+}
+
+/* Actions */
+
+.navbar__actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1rem;
+
+}
+
+/* Buttons */
+
+.navbar__theme-btn,
+
+.navbar__menu-btn{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:var(--white);
+
+    background:rgba(255,255,255,.08);
+
+    transition:all .3s ease;
+
+}
+
+.navbar__theme-btn:hover,
+
+.navbar__menu-btn:hover{
+
+    background:var(--primary);
+
+    transform:rotate(20deg) ;
+
+}
+
+.navbar__menu-btn{
+
+    display:none;
+
+}
+/* Navbar after scrolling */
+
+.navbar--scrolled{
+
+    background: rgba(15,23,42,.95);
+
+    box-shadow: var(--shadow);
+
+}
+
+/* Mobile menu class */
+
+.navbar__menu--active{
+
+    display:flex;
+
+}
