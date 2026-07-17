@@ -8,9 +8,19 @@ const PORTFOLIO = {
 
         greeting: "Hello, I'm",
 
-        title: "AI & Machine Learning",
+        titles: [
 
-        subtitle: "Engineering Student",
+            "AI & Machine Learning Engineering Student",
+
+            "Hackathon Winner",
+
+            "AI Developer",
+
+            "Full Stack Learner",
+
+            "Problem Solver"
+
+        ],
 
         description:
             "Building AI-powered solutions, web applications, and innovative software to solve real-world problems."
@@ -21,9 +31,9 @@ const PORTFOLIO = {
 
         github: "https://github.com/Rahul-G23",
 
-        linkedin: "",
+        linkedin: "https://www.linkedin.com/in/rahul-g23",
 
-        email: ""
+        email: "rahulg23102006@gmail.com"
 
     },
 

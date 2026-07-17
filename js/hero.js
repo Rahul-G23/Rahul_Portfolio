@@ -10,9 +10,6 @@ function initializeHero() {
     document.querySelector(".hero__name").textContent =
         `${PORTFOLIO.personal.firstName} ${PORTFOLIO.personal.lastName}`;
 
-    document.querySelector(".hero__title").innerHTML =
-        `${PORTFOLIO.personal.title}<br>${PORTFOLIO.personal.subtitle}`;
-
     document.querySelector(".hero__description").textContent =
         PORTFOLIO.personal.description;
 
@@ -30,7 +27,11 @@ function initializeHero() {
         PORTFOLIO.social.linkedin;
 
     document.querySelector(".hero__email").href =
-        `mailto:${PORTFOLIO.social.email}`;
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${PORTFOLIO.social.email}`;
+
+    document.querySelector(".hero__email").target = "_blank";
+
+    document.querySelector(".hero__email").rel = "noopener noreferrer";
 
     console.log("Hero Initialized");
 
