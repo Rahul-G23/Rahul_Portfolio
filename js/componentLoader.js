@@ -17,29 +17,29 @@ async function loadAllComponents() {
 
     await Promise.all([
 
-        loadComponent("navbar", "components/layout/navbar.html"),
+        loadComponent("navbar-container", "components/layout/navbar.html"),
 
-        loadComponent("hero", "components/sections/hero.html"),
+        loadComponent("hero-container", "components/sections/hero.html"),
 
-        loadComponent("about", "components/sections/about.html"),
+        loadComponent("about-container", "components/sections/about.html"),
 
-        loadComponent("statistics", "components/sections/statistics.html"),
+        loadComponent("statistics-container", "components/sections/statistics.html"),
 
-        loadComponent("education", "components/sections/education.html"),
+        loadComponent("education-container", "components/sections/education.html"),
 
-        loadComponent("skills", "components/sections/skills.html"),
+        loadComponent("skills-container", "components/sections/skills.html"),
 
-        loadComponent("projects", "components/sections/projects.html"),
+        loadComponent("projects-container", "components/sections/projects.html"),
 
-        loadComponent("innovation", "components/sections/innovation.html"),
+        loadComponent("innovation-container", "components/sections/innovation.html"),
 
-        loadComponent("achievements", "components/sections/achievements.html"),
+        loadComponent("achievements-container", "components/sections/achievements.html"),
 
-        loadComponent("certifications", "components/sections/certifications.html"),
+        loadComponent("certifications-container", "components/sections/certifications.html"),
 
-        loadComponent("contact", "components/sections/contact.html"),
+        loadComponent("contact-container", "components/sections/contact.html"),
 
-        loadComponent("footer", "components/layout/footer.html")
+        loadComponent("footer-container", "components/layout/footer.html")
 
     ]);
 }

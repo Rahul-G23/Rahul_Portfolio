@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async () => {
+async function initializeApp() {
 
     await loadAllComponents();
 
@@ -9,5 +9,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     initializeTyping();
 
     initializeStatistics();
-    
-});
+
+    initializeScrollSpy();
+
+}
+
+initializeApp();
