@@ -7,5 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initializeHero();
 
     initializeTyping();
+
+    initializeStatistics();
     
 });

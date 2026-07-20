@@ -12,9 +12,9 @@
 
     width:100%;
 
-    z-index:var(--z-navbar);
+    z-index:1000;
 
-    background:rgba(15,23,42,.75);
+    background:rgba(15,23,42,.95);
 
     backdrop-filter:blur(12px);
 

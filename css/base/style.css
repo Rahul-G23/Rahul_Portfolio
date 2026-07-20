@@ -2,6 +2,10 @@
    GLOBAL STYLES
 =========================== */
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
 
     font-family:var(--font-family);
@@ -29,6 +33,9 @@ body{
 section{
 
     padding:var(--section-padding) 0;
+
+    scroll-margin-top: 90px;
+
 
 }
 
