@@ -22,7 +22,7 @@ const STATISTICS = [
     },
 
     {
-        number: 8.54,
+        number: 8.36,
         suffix: "",
         title: "CGPA",
         icon: "fa-solid fa-graduation-cap"

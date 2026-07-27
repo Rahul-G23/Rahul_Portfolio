@@ -14,6 +14,8 @@ async function initializeApp() {
 
     initializeScrollSpy();
 
+    initializeEducation();
+
 }
 
 initializeApp();

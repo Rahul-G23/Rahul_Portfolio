@@ -66,7 +66,7 @@ function renderStatistics() {
 
             <div class="about__stat">
 
-                <h3>8.54</h3>
+                <h3>8.36</h3>
 
                 <span>CGPA</span>
 
