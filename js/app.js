@@ -10,6 +10,8 @@ async function initializeApp() {
 
     initializeStatistics();
 
+    initializeAbout();
+
     initializeScrollSpy();
 
 }

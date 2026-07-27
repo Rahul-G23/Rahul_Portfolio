@@ -1,69 +1,29 @@
-/* ===========================
-   STATISTICS
-=========================== */
+.about__stats{
 
-.statistics{
+    display:flex;
 
-    padding:5rem 0;
+    justify-content:space-between;
 
-}
-
-.statistics__grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:2rem;
+    margin:35px 0;
 
 }
 
-.statistics__card{
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    padding:2rem;
+.about__stat{
 
     text-align:center;
 
-    transition:var(--transition);
-
 }
 
-.statistics__card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--primary);
-
-}
-
-.statistics__icon{
+.about__stat h3{
 
     font-size:2rem;
 
     color:var(--primary);
 
-    margin-bottom:1rem;
-
 }
 
-.statistics__number{
+.about__stat span{
 
-    font-size:2.5rem;
-
-    color:var(--white);
-
-    margin-bottom:.5rem;
-
-}
-
-.statistics__title{
-
-    color:var(--text-light);
+    color:var(--text-secondary);
 
 }
