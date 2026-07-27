@@ -16,6 +16,8 @@ async function initializeApp() {
 
     initializeEducation();
 
+    initializeSkills();
+
 }
 
 initializeApp();
