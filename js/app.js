@@ -20,6 +20,8 @@ async function initializeApp() {
 
     initializeProjects();
 
+    initializeInnovation();
+
 }
 
 initializeApp();
