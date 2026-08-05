@@ -24,6 +24,8 @@ async function initializeApp() {
 
     initializeAchievements();
 
+    initializeCertifications();
+
 }
 
 initializeApp();
