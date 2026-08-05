@@ -18,6 +18,8 @@ async function initializeApp() {
 
     initializeSkills();
 
+    initializeProjects();
+
 }
 
 initializeApp();

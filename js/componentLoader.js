@@ -4,19 +4,34 @@
 
 async function loadComponent(id, path) {
 
-    const response = await fetch(path);
+    try {
 
-    if (!response.ok) {
+        console.log(`Loading: ${id} -> ${path}`);
 
-        console.error(`Unable to load: ${path}`);
+        const container = document.getElementById(id);
 
-        return;
+        if (!container) {
+            console.error(`❌ Container NOT FOUND: ${id}`);
+            return;
+        }
+
+        const response = await fetch(path);
+
+        if (!response.ok) {
+            throw new Error(`Unable to load: ${path}`);
+        }
+
+        const html = await response.text();
+
+        container.innerHTML = html;
+
+        console.log(`✅ Loaded: ${id}`);
+
+    } catch (error) {
+
+        console.error(error);
 
     }
-
-    const html = await response.text();
-
-    document.getElementById(id).innerHTML = html;
 
 }
 
@@ -94,23 +109,33 @@ async function loadAllComponents() {
 }
 async function loadComponent(id, path) {
 
+    console.log("Loading:", id);
+
+    const container = document.getElementById(id);
+
+    if (!container) {
+        console.error("❌ Missing container:", id);
+        return;
+    }
+
     try {
 
         const response = await fetch(path);
 
         if (!response.ok) {
-
-            throw new Error(`Unable to load: ${path}`);
-
+            console.error("❌ Cannot load:", path);
+            return;
         }
 
         const html = await response.text();
 
-        document.getElementById(id).innerHTML = html;
+        container.innerHTML = html;
 
-    } catch (error) {
+        console.log("✅ Loaded:", id);
 
-        console.error(error);
+    } catch (err) {
+
+        console.error(err);
 
     }
 
