@@ -22,6 +22,8 @@ async function initializeApp() {
 
     initializeInnovation();
 
+    initializeAchievements();
+
 }
 
 initializeApp();
