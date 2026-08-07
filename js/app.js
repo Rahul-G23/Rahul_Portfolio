@@ -26,6 +26,8 @@ async function initializeApp() {
 
     initializeCertifications();
 
+    initializeContact();
+
 }
 
 initializeApp();

@@ -5,28 +5,18 @@ const CONTACT = {
     title: "Let's Connect",
 
     subtitle:
-        "Interested in collaborating, discussing internship opportunities, hackathons, or software development projects? Feel free to reach out through any of the platforms below.",
+        "Interested in collaborating, discussing internship opportunities, hackathons, or software development projects? Feel free to connect through the platforms below or send me a message using the contact form.",
 
     info: [
 
         {
             icon: "fa-solid fa-envelope",
 
-            title: "Email",
+            title: "Email Me",
 
-            value: "rahulg23102006@gmail.com",
+            value: "Send a message using the contact form",
 
-            link: "mailto:rahulg23102006@gmail.com"
-        },
-
-        {
-            icon: "fa-solid fa-phone",
-
-            title: "Phone",
-
-            value: "+91 63611 46881",
-
-            link: "tel:+916361146881"
+            link: "#contactForm"
         },
 
         {
