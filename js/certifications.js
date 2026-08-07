@@ -11,11 +11,16 @@ function initializeCertifications() {
     const grid = document.getElementById("certifications-grid");
 
     if (!grid) {
+
         console.error("Certifications grid not found.");
+
         return;
+
     }
 
     renderCertifications(grid);
+
+    initializeCertificateModal();
 
 }
 
@@ -37,6 +42,41 @@ function renderCertifications(container) {
 
 }
 
+function initializeCertificateModal() {
+
+    const modal = document.getElementById("certificate-modal");
+
+    const closeBtn = document.getElementById("certificate-close");
+
+    if (!modal || !closeBtn) return;
+
+    closeBtn.onclick = () => {
+
+        modal.classList.remove("active");
+
+    };
+
+    modal.onclick = (e) => {
+
+        if (e.target === modal) {
+
+            modal.classList.remove("active");
+
+        }
+
+    };
+
+    document.onkeydown = (e) => {
+
+        if (e.key === "Escape") {
+
+            modal.classList.remove("active");
+
+        }
+
+    };
+
+}
 /**
  * ==========================================
  * Create Certificate Card
@@ -49,20 +89,11 @@ function createCertificateCard(item) {
 
     card.className = "certificate-card";
 
-    const previewImage =
-        item.image && item.image.length > 0
-            ? item.image[0]
-            : "assets/images/certifications/default-certificate.jpg";
-
     card.innerHTML = `
 
-        <div class="certificate-image">
+        <div class="certificate-preview">
 
-            <img
-                src="${previewImage}"
-                alt="${item.title}"
-                loading="lazy"
-            >
+            <i class="fa-solid fa-file-pdf"></i>
 
             <span class="certificate-status ${item.status.toLowerCase()}">
                 ${item.status}
@@ -97,13 +128,16 @@ function createCertificateCard(item) {
             <div class="certificate-buttons">
 
                 ${
-                    item.image.length > 0
+                    item.pdf && item.pdf.length > 0
                         ? `
                         <button
                             class="certificate-btn"
                             onclick="openCertificateGallery(${item.id})">
-                            <i class="fa-solid fa-images"></i>
+
+                            <i class="fa-solid fa-folder-open"></i>
+
                             View Certificates
+
                         </button>
                         `
                         : ""
@@ -116,8 +150,11 @@ function createCertificateCard(item) {
                             href="${item.credential}"
                             target="_blank"
                             class="certificate-btn verify-btn">
-                            <i class="fa-solid fa-up-right-from-square"></i>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                             Verify
+
                         </a>
                         `
                         : ""
@@ -135,7 +172,7 @@ function createCertificateCard(item) {
 
 /**
  * ==========================================
- * Skills Chips
+ * Skills
  * ==========================================
  */
 
@@ -153,7 +190,7 @@ function createCertificateSkills(skills) {
 
 /**
  * ==========================================
- * Certificate Gallery
+ * Open Certificates
  * ==========================================
  */
 
@@ -164,8 +201,86 @@ function openCertificateGallery(id) {
 
     if (!certificate) return;
 
-    console.log(certificate.image);
+    const modal =
+        document.getElementById("certificate-modal");
 
-    // Gallery will be added later.
+    const title =
+        document.getElementById("certificate-modal-title");
+
+    const list =
+        document.getElementById("certificate-list");
+
+    title.textContent = certificate.title;
+
+    list.innerHTML = "";
+
+    certificate.pdf.forEach(file => {
+
+        const name = file
+            .split("/")
+            .pop()
+            .replace(".pdf", "")
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, c => c.toUpperCase());
+
+        list.innerHTML += `
+
+            <div class="certificate-item">
+
+                <div class="certificate-item-left">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <span>${name}</span>
+
+                </div>
+
+                <a
+                    href="${file}"
+                    target="_blank"
+                    class="certificate-open">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        `;
+
+    });
+
+    modal.classList.add("active");
 
 }
+
+const modal = document.getElementById("certificate-modal");
+
+const closeBtn =
+    document.getElementById("certificate-close");
+
+closeBtn.addEventListener("click", () => {
+
+    modal.classList.remove("active");
+
+});
+
+modal.addEventListener("click", e => {
+
+    if (e.target === modal) {
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+document.addEventListener("keydown", e => {
+
+    if (e.key === "Escape") {
+
+        modal.classList.remove("active");
+
+    }
+
+});

@@ -23,7 +23,7 @@ const CERTIFICATIONS = {
             description:
                 "Currently pursuing a comprehensive learning path focused on transitioning from Data Analytics to Data Science, covering data visualization, programming, machine learning, and statistical analysis.",
 
-            image: [],
+            pdf: [],
 
             credential: "",
 
@@ -55,14 +55,14 @@ const CERTIFICATIONS = {
             description:
                 "Successfully completed an introductory certification covering Artificial Intelligence concepts, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, and Robotic Process Automation.",
 
-            image: [
-                "assets/images/certifications/AI-Primer.jpg",
-                "assets/images/certifications/Introduction-to-AI.jpg",
-                "assets/images/certifications/Computer-Vision.jpg",
-                "assets/images/certifications/NLP.jpg",
-                "assets/images/certifications/RPA.jpg",
-                "assets/images/certifications/Deep-Learning.jpg",
-                "assets/images/certifications/Data-Science.jpg"
+            pdf: [
+                "assets/certificates/AI-Primer.pdf",
+                "assets/certificates/Introduction-to-AI.pdf",
+                "assets/certificates/Computer-Vision.pdf",
+                "assets/certificates/NLP.pdf",
+                "assets/certificates/RPA.pdf",
+                "assets/certificates/Deep-Learning.pdf",
+                "assets/certificates/Data-Science.pdf"
 
             ],
 
@@ -94,9 +94,9 @@ const CERTIFICATIONS = {
             description:
                 "Completed professional training on Microsoft Office applications with a focus on creating documents, spreadsheets, and improving workplace productivity.",
 
-            image: [
-                "assets/images/certifications/MS-Excel.jpg",
-                "assets/images/certifications/MS-Word.jpg"
+            pdf: [
+                "assets/certificates/MS-Excel.pdf",
+                "assets/certificates/MS-Word.pdf"
             ],
 
             credential: "",
@@ -122,8 +122,8 @@ const CERTIFICATIONS = {
             description:
                 "Completed professional training covering the responsibilities, communication practices, and organizational skills required for administrative professionals.",
 
-            image: [
-                "assets/images/certifications/administrative-professional.jpg"
+            pdf: [
+                "assets/certificates/Administrative-Professional.pdf"
             ],
 
             credential: "",
@@ -151,8 +151,8 @@ const CERTIFICATIONS = {
             description:
                 "Completed a practical course on Microsoft Word tips and techniques to improve document creation, formatting, productivity, and workflow efficiency.",
 
-            image: [
-                "assets/images/certifications/word-tips.jpg"
+            pdf: [
+                "assets/certificates/Word-tips.pdf"
             ],
 
             credential: "",
