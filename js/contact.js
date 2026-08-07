@@ -78,23 +78,49 @@ function initializeContactForm() {
 
         e.preventDefault();
 
+        const submitButton =
+            form.querySelector(".contact-btn");
+
+        submitButton.disabled = true;
+
+        submitButton.innerHTML = `
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            Sending...
+        `;
+
         emailjs.sendForm(
 
-            "YOUR_SERVICE_ID",
+            "service_re3ecgd",
 
-            "YOUR_TEMPLATE_ID",
+            "template_ptngtak",
 
             form,
 
-            "YOUR_PUBLIC_KEY"
+            "XaiAiWzcitsO_nRau"
 
         )
 
         .then(() => {
 
-            alert("Message sent successfully!");
+            submitButton.innerHTML = `
+                <i class="fa-solid fa-circle-check"></i>
+                Message Sent
+            `;
+
+            alert("✅ Thank you! Your message has been sent successfully.");
 
             form.reset();
+
+            setTimeout(() => {
+
+                submitButton.disabled = false;
+
+                submitButton.innerHTML = `
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
+                `;
+
+            }, 2000);
 
         })
 
@@ -102,7 +128,14 @@ function initializeContactForm() {
 
             console.error(error);
 
-            alert("Unable to send message. Please try again.");
+            alert("❌ Unable to send your message. Please try again later.");
+
+            submitButton.disabled = false;
+
+            submitButton.innerHTML = `
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+            `;
 
         });
 
