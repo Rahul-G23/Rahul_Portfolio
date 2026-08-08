@@ -55,11 +55,6 @@ async function loadAllComponents() {
         ),
 
         loadComponent(
-            "statistics-container",
-            "components/sections/statistics.html"
-        ),
-
-        loadComponent(
             "about-container",
             "components/sections/about.html"
         ),
