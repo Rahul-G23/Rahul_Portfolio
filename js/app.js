@@ -28,6 +28,8 @@ async function initializeApp() {
 
     initializeContact();
 
+    initializeFooter();
+
 }
 
 initializeApp();
