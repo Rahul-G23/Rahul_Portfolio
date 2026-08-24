@@ -2,6 +2,8 @@ async function initializeApp() {
 
     await loadAllComponents();
 
+        initializeTheme();
+
     initializeNavbar();
 
     initializeHero();

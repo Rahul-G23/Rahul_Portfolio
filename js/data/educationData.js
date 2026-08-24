@@ -46,7 +46,7 @@ const EDUCATION = {
         {
             icon: "fa-solid fa-school",
 
-            degree: "Secondary School Leaving Certificate (SSLC)",
+            degree: "Xth Standard",
 
             specialization: "",
 

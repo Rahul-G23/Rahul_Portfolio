@@ -2,45 +2,332 @@
    ROOT VARIABLES
 =========================== */
 
-:root{
+:root {
 
-    /* Colors */
-    --primary:#3B82F6;
-    --secondary:#06B6D4;
+    /* ===========================
+       COLORS
+    =========================== */
 
-    --background:#0F172A;
-    --surface:#1E293B;
-    --surface-light:#334155;
+    --primary: #3B82F6;
+    --secondary: #06B6D4;
 
-    --white:#FFFFFF;
-    --text:#E2E8F0;
-    --text-light:#94A3B8;
+    --background: #0F172A;
+    --surface: #1E293B;
+    --surface-light: #334155;
 
-    --success:#22C55E;
-    --warning:#F59E0B;
-    --danger:#EF4444;
+    --white: #FFFFFF;
+    --text: #E2E8F0;
+    --text-light: #94A3B8;
 
-    /* Typography */
-    --font-family:'Poppins',sans-serif;
+    --glass-background: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.10);
 
-    --fs-xl:4rem;
-    --fs-lg:2.5rem;
-    --fs-md:1.2rem;
-    --fs-sm:1rem;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
 
-    /* Spacing */
-    --section-padding:100px;
-    --container-width:1200px;
 
-    /* Border Radius */
-    --radius-sm:8px;
-    --radius-md:15px;
-    --radius-lg:25px;
+    /* ===========================
+       TYPOGRAPHY
+    =========================== */
 
-    /* Shadows */
-    --shadow:0 10px 30px rgba(0,0,0,.25);
+    --font-family: 'Poppins', sans-serif;
 
-    /* Animation */
-    --transition:.3s ease;
+    --fs-xl: 4rem;
+    --fs-lg: 2.5rem;
+    --fs-md: 1.2rem;
+    --fs-sm: 1rem;
+
+
+    /* ===========================
+       SPACING
+    =========================== */
+
+    --section-padding: 100px;
+    --container-width: 1200px;
+
+
+    /* ===========================
+       BORDER RADIUS
+    =========================== */
+
+    --radius-sm: 8px;
+    --radius-md: 15px;
+    --radius-lg: 25px;
+
+
+    /* ===========================
+       SHADOWS
+    =========================== */
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+
+    /* ===========================
+       ANIMATION
+    =========================== */
+
+    --transition: 0.3s ease;
+
+}
+
+
+/* ===========================
+   LIGHT THEME VARIABLES
+=========================== */
+
+[data-theme="light"] {
+
+    --primary: #2563EB;
+    --secondary: #0891B2;
+
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+    --surface-light: #E2E8F0;
+
+    --white: #0F172A;
+    --text: #1E293B;
+    --text-light: #64748B;
+
+    --glass-background: rgba(255, 255, 255, 0.75);
+    --glass-border: rgba(15, 23, 42, 0.10);
+
+    --success: #16A34A;
+    --warning: #D97706;
+    --danger: #DC2626;
+
+    --shadow:
+        0 10px 30px rgba(15, 23, 42, 0.10);
+
+}
+
+
+/* ===========================
+   THEME TRANSITIONS
+=========================== */
+
+html {
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+body {
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+/* ===========================
+   LIGHT THEME GLOBAL
+=========================== */
+
+[data-theme="light"] body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
+/* ===========================
+   SECTION BACKGROUNDS
+=========================== */
+
+[data-theme="light"] .hero,
+[data-theme="light"] .about,
+[data-theme="light"] .education,
+[data-theme="light"] .skills,
+[data-theme="light"] .projects,
+[data-theme="light"] .innovation,
+[data-theme="light"] .achievements,
+[data-theme="light"] .certifications,
+[data-theme="light"] .contact {
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
+/* ===========================
+   COMMON TEXT
+=========================== */
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+
+    color: var(--text);
+
+}
+
+
+[data-theme="light"] p {
+
+    color: var(--text-light);
+
+}
+
+
+/* ===========================
+   GLASS CARDS
+=========================== */
+
+[data-theme="light"] .about__card,
+[data-theme="light"] .about__content,
+[data-theme="light"] .education__card,
+[data-theme="light"] .skill-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .innovation-card,
+[data-theme="light"] .achievement-card,
+[data-theme="light"] .certificate-card,
+[data-theme="light"] .contact__info,
+[data-theme="light"] .contact__form {
+
+    background: var(--glass-background);
+
+    border-color: var(--glass-border);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08);
+
+}
+
+
+/* ===========================
+   CARD HOVER
+=========================== */
+
+[data-theme="light"] .about__card:hover,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .certificate-card:hover,
+[data-theme="light"] .achievement-card:hover,
+[data-theme="light"] .innovation-card:hover {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.12);
+
+}
+
+
+/* ===========================
+   CHIPS / BADGES
+=========================== */
+
+[data-theme="light"] .certificate-chip,
+[data-theme="light"] .tech-badge,
+[data-theme="light"] .skill-chip,
+[data-theme="light"] .about__highlight {
+
+    background: rgba(15, 23, 42, 0.05);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    color: var(--text);
+
+}
+
+
+/* ===========================
+   FORM INPUTS
+=========================== */
+
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+
+    background: #FFFFFF;
+
+    color: var(--text);
+
+    border-color:
+        rgba(15, 23, 42, 0.12);
+
+}
+
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+
+    color: #64748B;
+
+}
+
+
+/* ===========================
+   SOCIAL / ICON BOXES
+=========================== */
+
+[data-theme="light"] .hero__social-link,
+[data-theme="light"] .contact__social-link {
+
+    background: rgba(15, 23, 42, 0.05);
+
+    color: var(--text);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+[data-theme="light"] footer {
+
+    background: #F1F5F9;
+
+    color: var(--text);
+
+    border-top-color:
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+/* ===========================
+   MODAL
+=========================== */
+
+[data-theme="light"] .certificate-modal-content {
+
+    background: #FFFFFF;
+
+    color: var(--text);
+
+    border-color:
+        rgba(15, 23, 42, 0.10);
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, 0.18);
+
+}
+
+
+[data-theme="light"] .certificate-item {
+
+    background: #F8FAFC;
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+    color: var(--text);
 
 }

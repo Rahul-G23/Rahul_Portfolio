@@ -197,3 +197,80 @@
     display:flex;
 
 }
+
+/* ==========================================
+   THEME TOGGLE
+========================================== */
+
+.navbar__theme-btn {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.navbar__theme-btn:hover {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #FFFFFF;
+
+    transform: rotate(15deg);
+
+}
+
+
+/* ==========================================
+   LIGHT THEME NAVBAR
+========================================== */
+
+[data-theme="light"] .navbar {
+
+    background:
+        rgba(248, 250, 252, 0.85);
+
+    border-bottom-color:
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+[data-theme="light"] .navbar__theme-btn {
+
+    background:
+        rgba(15, 23, 42, 0.05);
+
+    border-color:
+        rgba(15, 23, 42, 0.08);
+
+}
