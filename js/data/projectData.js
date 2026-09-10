@@ -7,8 +7,50 @@ const PROJECTS = {
         "A collection of projects showcasing my expertise in full-stack development, AI, simulations, database management, and interactive applications.",
 
     items: [
+    {
+    id: 1,
+
+    title: "Project Management App",
+
+    category: "Full-Stack Web Application",
+
+    description:
+        "A full-stack project management application designed to help users manage projects, tasks, team members, and project progress through a centralized and organized platform.",
+
+    image: "assets/images/projects/project-management-app/cover.jpg",
+
+    gallery: [
+        "assets/images/projects/project-management-app/cover.jpg",
+        "assets/images/projects/project-management-app/login.jpg",
+        "assets/images/projects/project-management-app/view-project.jpg"
+    ],
+
+    technologies: [
+        "React",
+        "Vite",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose"
+    ],
+
+    features: [
+        "User Authentication",
+        "Project Management",
+        "Task Management",
+        "Team Member Management",
+        "Project Progress Tracking"
+    ],
+
+    github: "https://github.com/Rahul-G23/Project-Management-App",
+
+    live: "https://project-management-app-q72v.onrender.com/",
+
+    year: "2026"
+        },
+
         {
-            id: 1,
+            id: 2,
 
             title: "Page Pulse",
 
@@ -50,7 +92,7 @@ const PROJECTS = {
         },
 
         {
-            id: 2,
+            id: 3,
 
             title: "Virus Contamination Simulator",
 
@@ -96,7 +138,7 @@ const PROJECTS = {
         },
 
         {
-            id: 3,
+            id: 4,
 
             title: "Industrial Manufacturing Stock Management System",
 
@@ -137,7 +179,7 @@ const PROJECTS = {
         },
 
         {
-            id: 4,
+            id: 5,
 
             title: "ExamVerse AI",
 
@@ -181,7 +223,7 @@ const PROJECTS = {
         },
 
         {
-            id: 5,
+            id: 6,
 
             title: "KawachYatri",
 
@@ -223,7 +265,7 @@ const PROJECTS = {
         },
 
         {
-            id: 6,
+            id: 7,
 
             title: "Tower Defense Game",
 
